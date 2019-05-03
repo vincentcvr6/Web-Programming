@@ -1,0 +1,12 @@
+#frm{
+padding:10px;
+width:540px;
+}
+fieldset{
+border-color:blue;
+width:60%;
+}
+body{
+background-color: darkorange;
+color: mediumblue;
+}
