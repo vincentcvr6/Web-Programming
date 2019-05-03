@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <script src="a3q1.js"></script>
+    <title>A3Q1</title>
+</head>
+<body>
+    <h1>Assignment 3 Question 1</h1>
+    <br>Search in this text:<br />
+    <textarea rows="10" cols="80" id="textarea"></textarea><br />
+    <label>Split the Text accorinf to these char:</label>
+    <input type="text" size="20" id ="splitch"><br/>
+    <label>Test each word with this regex:</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" size="20" id="regex"><br/>
+
+    <label> Modifiers for the regex:</label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="text" size="5" id="mod"><br/>
+    <input type="button" onclick="search()" id="search" value="search">
+    <input type="button" id="reset" onclick="reset()" value="reset"><br />
+
+    <div id = output></div>
+
+</body>
+</html>
