@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <html lang="en">
+  <meta charset="uft-8">
+<script>
+    var nbr=parseInt(prompt("Enter a number: "));
+    document.write("<table border=1 width=50%>");
+    document.write("<tr>");
+
+    for(var n=0;n<=nbr;n++){
+      document.write("<th>"+n+"</th>");
+    }
+      document.write("</tr>");
+
+    for(var p=1;p<=nbr;p++){
+      document.write("<tr><th>"+p+"</th>");
+
+    for(var k=1;k<=nbr;k++){
+      document.write("<th>"+p*k+"</th>");
+      }
+      document.write("</tr>");
+      }
+
+      document.write("</table>");
+
+  </script>
+</head>
+</html>
