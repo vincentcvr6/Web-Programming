@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="utf-8">
+<title>A3Q5</title>
+</head>
+<style type="text/css">
+img{
+width: 100px;
+height: 100px;
+}
+body{
+background-color: #FFFFAC;
+}
+.information{
+  border-style: solid;
+  border-color:#6443B4;
+  background-color:#D5C8F7;
+}
+.information legend{
+  color:#6443B4;
+  font-size: 20px;
+  font-weight:bold;
+}
+.information label{
+  color: #A28AE5;
+}
+.specifications{
+  border-style: solid;
+  border-color: #458F2E;
+  background-color:#FFFFAC;
+}
+.specifications legend{
+  font-weight: bold;
+  font-size: 20px;
+  color: #458F2E;
+}
+.specifications label{
+color: #43E63E;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td>
+<a href="https://cdn0.iconfinder.com/data/icons/building-vol-9-1/512/3-512.png">
+<img src="https://cdn0.iconfinder.com/data/icons/building-vol-9-1/512/3-512.png">
+</a>
+</td>
+<td>
+<h1>Hotel Reservation Form</h1>
+</td>
+</tr>
+</table>
+
+<form>
+<fieldset class="information">
+<legend>Reservation Information</legend>
+<label>Number of Rooms(max 5 people per room) </label>
+<input type="number" name="noOfRooms"><br><br>
+<label>Smoker? </label>
+<input type="radio" name="smoker" value="Yes">Yes
+<input type="radio" name="smoker" value="No">No<br><br>
+<label>Check-in: </label>
+<input type="data" name="checkIn" value="01/01/2019"><br><br>
+<label>Check-out: </label>
+<input type="data" name="checkOut" value="02/01/2019"><br><br>
+</fieldset>
+<br><br>
+<fieldset class="specifications">
+<legend>Room Specifications</legend>
+<ul>
+<li>
+<label>Number of single/double beds: </label><br>
+<input type="checkbox" name="noOfBeds" value="0/2">0/2
+<input type="checkbox" name="noOfBeds" value="2/0">2/0
+<input type="checkbox" name="noOfBeds" value="1/1">1/1
+<input type="checkbox" name="noOfBeds" value="0/2">0/2
+<input type="checkbox" name="noOfBeds" value="1/2">1/2
+</li>
+<br>
+<li>
+<label>Do you have preferred locations for the hotel?</label><br>
+<input type="checkbox" name="location" value="downtown">Downtown
+<input type="checkbox" name="location" value="montrealEast">Montreal East
+<input type="checkbox" name="location" value="montrealWest">Montreal West
+<input type="checkbox" name="location" value="nearAirport">Near to the airport
+<input type="checkbox" name="location" value="oldPort">Old port
+<input type="checkbox" name="location" value="dontCare">Don't care
+</li>
+<br>
+<li>
+<label>Price Range/per night:</label><br>
+<select id = "price">
+<option value="50"><$50</option>
+<option value="100"><$100</option>
+<option value="200"><$200</option>
+<option value="audi">No price limit</option>
+</select>
+</li>
+<br>
+<li>
+<label>Number of Private Parkings</label><br>
+<input type="radio" name="privateParkings" value="0"> 0<br>
+<input type="radio" name="privateParkings" value="1"> 1<br>
+<input type="radio" name="privateParkings" value="2"> 2<br>
+<input type="radio" name="privateParkings" value="3"> 3<br>
+<input type="radio" name="privateParkings" value="4"> 4<br>
+</li>
+<br>
+<li>
+<label>Special Facilities</label><br>
+<input type="checkbox" name="facilities" value="minibar">Minibar
+<input type="checkbox" name="facilities" value="balcony">Balcony
+<input type="checkbox" name="facilities" value="pool">Pool
+<input type="checkbox" name="facilities" value="waterFront">Water Front
+<input type="checkbox" name="facilities" value="gardenFront">Gardern Front
+</li>
+</ul>
+</fieldset>
+</form>
+<br><br>
+<div id = "expertsuggestion"></div>
+<label>Let's see what we can find</label><br><br>
+<input type="submit" value="submit" name="search" onclick="message()">
+<input type="submit" name="reset" value="Start over">
+</body>
+</html>
+<script>
+function message(){
+   let input = document.getElementById("price");
+   let selected = input.options[input.selectedIndex].value;
+   if(selected == "50" || selected == "100"){
+       decision = '<fieldset class="specifications">'+
+         '<legend>Expert Suggestion</legend>'+
+         'It is very difficult to find a hotel room in this price range at Downtown</fieldset>';
+       document.getElementById('expertsuggestion').innerHTML = decision;
+   }else{
+       document.getElementById('expertsuggestion').innerHTML = "";
+   }
+}
+</script>
