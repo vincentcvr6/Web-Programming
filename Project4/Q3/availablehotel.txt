@@ -1,4 +1,0 @@
-Montreal Hotel:Downtown:Saint-Catherine:50
-Sand Dunes Resort & Spa:Montreal East:Saint-Laurent:500
-Grand Resort:Montreal West:Sherbrooke:200
-
